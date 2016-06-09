@@ -12,11 +12,7 @@ if (file_exists(__DIR__.'/vendor/autoload.php')) {
 
 function homestead_path()
 {
-    if (isset($_SERVER['HOME'])) {
-        return $_SERVER['HOME'].'/.homestead';
-    } else {
-        return $_SERVER['HOMEDRIVE'].$_SERVER['HOMEPATH'].DIRECTORY_SEPARATOR.'.homestead';
-    }
+    return __DIR__ . '/../../../.homestead';
 }
 
 $app = new Symfony\Component\Console\Application('Laravel Homestead', '2.2.1');
